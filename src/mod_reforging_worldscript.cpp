@@ -24,6 +24,7 @@ public:
         sItemReforge->SetEnabled(sConfigMgr->GetOption<bool>("Reforging.Enable", true));
         sItemReforge->SetReforgeableStats(sConfigMgr->GetOption<std::string>("Reforging.ReforgeableStats", ItemReforge::DefaultReforgeableStats));
         sItemReforge->SetPercentage(sConfigMgr->GetOption<float>("Reforging.Percentage", ItemReforge::PERCENTAGE_DEFAULT));
+        sItemReforge->SetNeedMoney(sConfigMgr->GetOption<uint32>("Reforging.NeedMoney", ItemReforge::NEEDMONEY_DEFAULT));
 
         if (reforgeEnableChanged)
             sItemReforge->HandleReload(true);
