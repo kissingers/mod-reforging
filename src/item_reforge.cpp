@@ -502,23 +502,23 @@ void ItemReforge::HandleStatModifier(Player* player, uint32 statType, int32 val,
             break;
         case ITEM_MOD_AGILITY:                          // modify agility
             player->HandleStatFlatModifier(UNIT_MOD_STAT_AGILITY, BASE_VALUE, float(val), apply);
-            player->ApplyStatBuffMod(STAT_AGILITY, float(val), apply);
+            player->UpdateStatBuffMod(STAT_AGILITY);
             break;
         case ITEM_MOD_STRENGTH:                         //modify strength
             player->HandleStatFlatModifier(UNIT_MOD_STAT_STRENGTH, BASE_VALUE, float(val), apply);
-            player->ApplyStatBuffMod(STAT_STRENGTH, float(val), apply);
+            player->UpdateStatBuffMod(STAT_STRENGTH);
             break;
         case ITEM_MOD_INTELLECT:                        //modify intellect
             player->HandleStatFlatModifier(UNIT_MOD_STAT_INTELLECT, BASE_VALUE, float(val), apply);
-            player->ApplyStatBuffMod(STAT_INTELLECT, float(val), apply);
+            player->UpdateStatBuffMod(STAT_INTELLECT);
             break;
         case ITEM_MOD_SPIRIT:                           //modify spirit
             player->HandleStatFlatModifier(UNIT_MOD_STAT_SPIRIT, BASE_VALUE, float(val), apply);
-            player->ApplyStatBuffMod(STAT_SPIRIT, float(val), apply);
+            player->UpdateStatBuffMod(STAT_SPIRIT);
             break;
         case ITEM_MOD_STAMINA:                          //modify stamina
             player->HandleStatFlatModifier(UNIT_MOD_STAT_STAMINA, BASE_VALUE, float(val), apply);
-            player->ApplyStatBuffMod(STAT_STAMINA, float(val), apply);
+            player->UpdateStatBuffMod(STAT_STAMINA);
             break;
         case ITEM_MOD_DEFENSE_SKILL_RATING:
             player->ApplyRatingMod(CR_DEFENSE_SKILL, int32(val), apply);
