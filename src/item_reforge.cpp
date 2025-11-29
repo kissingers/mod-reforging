@@ -632,7 +632,7 @@ void ItemReforge::HandleStatModifier(Player* player, uint32 statType, int32 val,
             player->ApplySpellPenetrationBonus(val, apply);
             break;
         case ITEM_MOD_BLOCK_VALUE:
-            player->HandleBaseModValue(SHIELD_BLOCK_VALUE, FLAT_MOD, float(val), apply);
+            player->HandleBaseModFlatValue(SHIELD_BLOCK_VALUE, float(val), apply);
             break;
             /// @deprecated item mods
         case ITEM_MOD_SPELL_HEALING_DONE:
